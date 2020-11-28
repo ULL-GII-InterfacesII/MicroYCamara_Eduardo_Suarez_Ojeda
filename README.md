@@ -9,7 +9,7 @@ https://github.com/ULL-GII-InterfacesII/MicroYCamara_Eduardo_Suarez_Ojeda.git
 Para la realización de esta práctica he optado por una escena 3D en la cual el usuario mueve un cubo que hace de "Jugador" con el que mediante colisiones trigger puede interactuar con los diferentes elementos.
 
 ### Escena:
-![](imagenes/ii1.JPEG)
+![](imagenes/ii1.JPG)
 
 Tenemos un rectángulo que actúa como pantalla de la imágen que llega desde la cámara, un cubo, en principio verde, que sirve para comenzar la grabación mediante el micrófono por defecto del sistema, un elemento con forma de cápsula que al colisionar con el jugador lanza el audio grabado anteriormente y por último una esfera que al colisionar con el jugador detienee/reanuda la grabación de la cámara.
 
