@@ -5,9 +5,11 @@ using UnityEngine;
 public class Pantalla : MonoBehaviour
 {
     private WebCamTexture imagen;
+    private bool estaParada;
     // Start is called before the first frame update
     IEnumerator Start()
     {
+        Stop.pararReanudar += playPause;
         findWebCams();
 
         yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
@@ -23,12 +25,23 @@ public class Pantalla : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.mainTexture = imagen;
         imagen.Play();
+        estaParada = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void playPause() {
+        Debug.Log("Evento pantalla");
+        if (estaParada) {
+            imagen.Play();
+        } else {
+            imagen.Pause();
+        }
+        estaParada = !estaParada;
     }
 
     void findWebCams()
